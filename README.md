@@ -5,6 +5,9 @@
 
 login : http://localhost:3000/login
 
+
+Start command : npm run dev
+
 ------------installed Packages-------------------
 json-server,
 redux,
