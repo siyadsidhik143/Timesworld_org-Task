@@ -6,7 +6,7 @@ body{
     margin-top: 8%;
     flex-wrap:wrap;
   }
-  
+
   .new-user-outer {
     font-size:smaller;
   }
@@ -74,4 +74,22 @@ body{
 
 .second-inner img{
     width: 350px;
+}
+
+
+@media screen and (max-width: 770px) {
+  .outer-box {
+    flex-direction: column; /* Stack the inner divs vertically */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    text-align: left; /* Reset text alignment for child elements */
+  }
+
+  .first-inner {
+    margin-right: 0; /* Remove right margin when centered */
+  }
+
+  .second-inner {
+    display: none; /* Hide the second-inner div on larger screens */
+  }
 }
