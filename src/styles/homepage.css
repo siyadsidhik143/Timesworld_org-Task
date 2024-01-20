@@ -1,0 +1,15 @@
+.navbar-nav .nav-link.active {
+    position: relative;
+  }
+  
+  .navbar-nav .nav-link.active::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: #474747; /* Set the desired line color */
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: 70%;
+  }
+  

@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from 'react';
+import { Route, Routes, useNavigate } from 'react-router-dom';
+import HomePage from './components/HomePage/HomePage';
+import Login from './components/Login';
+import "./styles/login.css"
+import './styles/homepage.css'
+import PrivateRouting from './components/PrivateRouting';
 
 function App() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    let auth = sessionStorage.getItem('auth');
+    if (auth && auth === 'authenticated') {
+      navigate('/');
+    } else {
+      navigate('/login');
+    }
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route element={<PrivateRouting />}>
+          <Route path="/" element={<HomePage />} />
+        </Route>
+      </Routes>
     </div>
   );
 }

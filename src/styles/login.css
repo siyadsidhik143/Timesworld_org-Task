@@ -1,0 +1,77 @@
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .outer-box{
+    margin-top: 8%;
+    flex-wrap:wrap;
+  }
+  
+  .new-user-outer {
+    font-size:smaller;
+  }
+  
+  .new-user{
+    font-weight: bold;
+  }
+  .custom-border input{
+    border: 2px solid #3d3a3a;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .custom-border input::placeholder {
+    color: #3d3a3a; 
+  }
+  .big-checkbox {
+    width: 20px; 
+    height: 20px;
+    border: 2px solid #3d3a3a;
+    cursor: pointer;  
+  }
+  .keep-me{
+    margin-top: 3px;
+  }
+  
+  .sign-btn{
+    background-color: #3d3a3a;
+    color: #fff;
+  }
+  .sign-btn:hover{
+    color: #fff;
+  }
+  .solid-line {
+    border-top: 2px solid #ccc;
+    width: 20%;
+    margin: 8px auto;
+  }
+  .custom-container {
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+  }
+
+  .round-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid black;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .round-icon img{
+    width: 20px;
+    height: 20px;
+  }
+
+.social-icons{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.second-inner img{
+    width: 350px;
+}
