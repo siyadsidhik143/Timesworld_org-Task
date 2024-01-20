@@ -2,16 +2,24 @@ import React, { useState } from 'react'
 import { Navbar, Nav, Form } from 'react-bootstrap';
 import { useSelector, useDispatch } from 'react-redux'
 import { activeHead } from './HeaderSlice';
+import { useNavigate } from 'react-router-dom';
 
 
 const Header = () => {
     const [expanded, setExpanded] = useState(false);
     const dispatch = useDispatch()
+    const navigate = useNavigate();
+
     const { active } = useSelector((state) => state.activeTab)
 
     const handleToggle = () => {
         setExpanded(!expanded);
     };
+
+    const logout = () => {
+        sessionStorage.removeItem('auth')
+        navigate('/login')
+    }
 
     return (
         <Navbar expand="lg" variant="light">
@@ -32,6 +40,9 @@ const Header = () => {
                         <Nav.Link className={active === 'europe' ? 'active' : ''}
                             onClick={() => dispatch(activeHead('europe'))}
                         >Europe</Nav.Link>
+                        <Nav.Link
+                            onClick={() => logout()}
+                        >Logout</Nav.Link>
                     </Nav>
                 </Form>
             </Navbar.Collapse>
