@@ -78,6 +78,7 @@ const HomePage = () => {
                       <Card.Img
                         src={card.flag}
                         alt={`Card ${index} image`}
+                        className="img_map"
                       />
                     </Col>
                     <Col md={8}>
