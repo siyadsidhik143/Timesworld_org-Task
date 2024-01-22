@@ -79,17 +79,17 @@ body{
 
 @media screen and (max-width: 770px) {
   .outer-box {
-    flex-direction: column; /* Stack the inner divs vertically */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
-    text-align: left; /* Reset text alignment for child elements */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    text-align: left;
   }
 
   .first-inner {
-    margin-right: 0; /* Remove right margin when centered */
+    margin-right: 0; 
   }
 
   .second-inner {
-    display: none; /* Hide the second-inner div on larger screens */
+    display: none; 
   }
 }
